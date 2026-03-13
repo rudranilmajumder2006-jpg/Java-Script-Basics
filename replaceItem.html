@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div idgi="container">
+        <li>Java</li>
+        <li id="oldtech">JSP</li>
+        <li>Hibernate</li>
+    </div>
+    <button onclick="replaceItem()">
+        Replace
+    </button>
+</body>
+<script>
+    let main = document.getElementById("container");
+    function replaceItem(){
+        let old = document.getElementById("oldtech");
+        let newItem = document.createElement("li");
+        newItem.textContent= "Rust";
+        main.replaceChild(newItem,old);
+    }
+</script>
+</html>
