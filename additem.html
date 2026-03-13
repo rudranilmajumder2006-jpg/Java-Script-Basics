@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <p class="item">Item 1</p>
+        <p class="item">Item 2</p>
+    </div>
+    <button onclick="addItem()">Add</button>
+</body>
+<script>
+    function addItem(){
+        let main = document.getElementById("container");
+        let p = document.createElement("p");
+        p.className = "item";
+        p.textContent = "Item3";
+        main.appendChild(p);
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <p class="chi">Item1</p>
+        <p class="child">Item2</p>
+    </div>
+    <button onclick="Replace()">replace</button>
+</body>
+<script>
+    let parent = document.getElementById("main");
+    
+    function Replace(){
+        let oldtech = document.getElementsByClassName("chi")[0];
+        let newTech = document.createElement("p");
+        newTech.textContent = "Item3";
+        parent.replaceChild(newTech,oldtech);
+    }
+</script>
+</html>
