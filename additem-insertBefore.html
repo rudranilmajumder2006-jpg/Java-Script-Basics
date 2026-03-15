@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <p id="id1">HTML</p>
+        <p id="id2">CSS</p>
+    </div>
+    <button onclick="AddItem()">Add Item</button>
+</body>
+<script>
+    function AddItem(){
+        let main = document.getElementsByClassName("main")[0];
+        let child = document.getElementById("id2");
+        let newChild = document.createElement("p");
+        newChild.textContent = "JAVA SCRIPT";
+        main.insertBefore(newChild,child);
+    }
+</script>
+</html>
