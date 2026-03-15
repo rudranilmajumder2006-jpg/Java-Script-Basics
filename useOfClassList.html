@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.red{
+    color:red;
+    background-color: aqua;
+}
+</style>
+</head>
+
+<body>
+
+<p id="text">Hello World</p>
+<button onclick="add()">Add</button>
+<br>
+<p id="text2" class="red">Hello World</p>
+<button onclick="remove()">Remove</button>
+<br>
+<p id="text3">Hello World</p>
+<button onclick="toggle()">Toggle</button>
+
+<script>
+function add(){
+    document.getElementById("text").classList.add("red");
+}
+function remove(){
+    document.getElementById("text2").classList.remove("red");
+}
+function toggle(){
+    document.getElementById("text3").classList.toggle("red");
+}
+</script>
+
+</body>
+</html>
