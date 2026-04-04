@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Rudra</p>
+    <div id="btnContainer">
+        <button>Red</button>
+        <button>Blue</button>
+        <button>Green</button>
+    </div>
+</body>
+<script>
+    document.querySelector("#btnContainer").addEventListener('click',function(e){
+        console.log(e.target.textContent);
+        document.querySelector("p").style.color = e.target.textContent;
+    })
+</script>
+</html>
