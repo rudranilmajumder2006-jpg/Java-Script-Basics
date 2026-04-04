@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBriL9_VSHJimxnUuGQUQI6eiiqte6VfzLSA&s" alt="" height="400px">
+    <div id="msgPrint">
+
+    </div>
+</body>
+<script>
+    document.querySelector("img").addEventListener('click', function(e){
+        // console.log("x: "+e.clientX);
+        // console.log("y: "+e.clientY);
+        let xAxis = e.clientX >= 44 && e.clientX <=136
+        let yAxis = e.clientY >= 216 && e.clientY <=266
+
+let condition = xAxis && yAxis;
+let msgPrint = document.getElementById("msgPrint");
+if(condition){
+    msgPrint.innerHTML = '<p style="color:blue; font-family:Algerian">PRICE IS &#8377;50,000/-</p>';
+}
+else{
+    msgPrint.innerHTML =" ";
+}
+
+    })
+</script>
+</html>
