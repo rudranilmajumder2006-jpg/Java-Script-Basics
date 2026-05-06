@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let user = [
+    {id : 12, name: "Govind", age: 28},
+    {id : 14, name: "Vishesh", age: 38},
+    {id : 15, name: "Ruben", age: 18},
+]
+
+let output = user.map(function(user){
+    return user.name.toUpperCase();
+})
+    console.log(output);
+    
+    output.forEach(function (name) {
+    console.log(name);
+
+})
+</script>
+</html>
