@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <button id="btnNext">Next</button>
+    <button id="btnPrev">Prev</button>
+</body>
+<script>
+    let userNames = ["sachin","saurav","rahul","dhoni","kohli","yuvi","rohit","raina","zaheer","munaf","yusuf"];
+    let start = 0;
+    let limit = 3;
+    function render(){
+        console.log("Start : ",start);
+        console.log("end : ",(start+limit));
+        let visibleUser = userNames.slice(start,start+limit);
+        let root = document.getElementById("root");
+        root.innerHTML = ' ';
+
+        visibleUser.forEach(function(user){
+            let p = document.createElement("p");
+            p.textContent = user;
+            root.append(p);
+        })
+    }
+    render();
+
+    document.querySelector("#btnNext").addEventListener("click",function(){
+        if(start+limit < userNames.length){
+            start = start + limit;
+            render();
+        }
+    });
+
+
+    document.querySelector("#btnPrev").addEventListener("click",function(){
+        if(start-limit>=0){
+            start=start-limit;
+            render();
+        }
+    })
+
+</script>
+</html>
