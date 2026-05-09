@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtInput">
+    <div id="root"></div> 
+</body>
+<script>
+    let userData = ["sanky","ram","rohan","deep","moin","adi"];
+    let txtInput = document.getElementById("txtInput");
+    let root = document.getElementById("root");
+
+    function render(user){
+        root.innerHTML = "";
+        user.forEach(function(user){
+
+            let p = document.createElement("p");
+            p.textContent = user;
+            root.append(p);
+        })
+    }
+    render(userData);
+
+    txtInput.addEventListener("input",function(){
+        let keyword = this.value;
+        let result = userData.filter(function(user){
+            return user.toLowerCase().includes(keyword.toLowerCase());
+
+        })
+        render(result);
+    })
+
+</script>
+</html>
