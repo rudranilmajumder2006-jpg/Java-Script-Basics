@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="view"></div>
+</body>
+<script>
+    let data = [
+    "Sachin","Roky","Vicky","Rohit","Dora","Nobita"
+    ]; 
+    let root = document.getElementById("root");
+    let output = data.map(function(data){
+        return data.toUpperCase();
+    })
+    console.log(output);
+    output.forEach(function(item){
+        let p = document.createElement("p");
+        p.textContent = item;
+        document.getElementById("view").append(p);
+    })
+    
+    
+    
+    
+</script>
+</html>
