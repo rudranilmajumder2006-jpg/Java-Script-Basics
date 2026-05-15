@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="tel" id="num">
+    <button id="check">Check</button>
+    <div id="view"></div>
+</body>
+<script>
+    let view = document.getElementById("view");
+    let num = document.getElementById("num");
+    
+    let check = document.getElementById("check");
+    let regex = /^\d{10}$/;
+
+    check.addEventListener("click",function(){
+        let data = num.value;
+        if(regex.test(data)){
+            view.innerHTML = `<p style="color:green">Valid mobile number</p>`;
+        }
+        else{
+            view.innerHTML = `<p style="color:red">Invalid mobile number</p>`;
+        }
+    })
+
+</script>
+</html>
