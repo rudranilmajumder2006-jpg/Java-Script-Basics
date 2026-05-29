@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const pr = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let number = Math.ceil((Math.random()*900)+100);
+            console.log(number);
+
+            if(number % 2==0){
+                resolve({status : 'SUCCESS', msg: number});
+            }
+            else{
+                reject({status : 404, msg: 'Invalid Number'});
+            }
+            
+        },5000)
+    })
+
+    const pr2 = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let number = Math.ceil((Math.random()*900)+100);
+            console.log(number);
+            
+            if(number%10==0){
+                resolve({status: 'SUCCESS', msg: number})
+            }
+            else{
+                reject({status: 404, msg: 'number not divisible by 10'})
+            }
+        },10000)
+    })
+
+
+
+    async function promiseWithArrow(){
+        try {
+            let obj = await pr;
+            let obj2 = await pr2;
+            console.log(obj);
+            console.log(obj2);
+            
+            
+        } catch (error) {
+            console.log(error);
+            
+            
+        }
+        finally{
+            console.log("always exceuted");
+            
+        }
+    }
+
+promiseWithArrow();
+
+</script>
+</html>
