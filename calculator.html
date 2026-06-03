@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Simple Calculator </h2>
+    <dl>
+        <dt>Num1: </dt>
+        <dd><input type="text" id="num1"></dd>
+
+        <dt>Num2: </dt>
+        <dd><input type="text" id="num2"></dd>
+    </dl>
+
+    <button id="add">Add</button>
+    <button id="sub">Sub</button>
+    <button id="mul">Mul</button>
+    <button id="div">Div</button>
+    <button id="clr">CLR</button>
+    
+    <br><br>
+    Result:
+    <div id="result"></div>
+</body>
+<script>
+    document.getElementById("add").addEventListener("click",function(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("result");
+        result.textContent = `${num1+num2}`;
+    })
+    document.getElementById("sub").addEventListener("click",function(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("result");
+        result.textContent = `${num1-num2}`;
+    })
+    document.getElementById("mul").addEventListener("click",function(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("result");
+        result.textContent = `${num1*num2}`;
+    })
+    document.getElementById("div").addEventListener("click",function(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("result");
+        result.textContent = `${num1/num2}`;
+    })
+    document.getElementById("clr").addEventListener("click",function(){
+
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let result = document.getElementById("result");
+        result.textContent = " ";
+    })
+    
+</script>
+</html>
