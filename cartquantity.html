@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart quantity</title>
+</head>
+<body>
+    <p id="para">Cart Quantity : 0</p>
+    <button id="quantity">Show Quantity</button>
+    <button id="add">Add to Cart</button>
+    <button id="add2">+2</button>
+    <button id="add3">+3</button>
+    <button id="reset">Reset Cart</button>
+</body>
+<script>
+    let quantity = 0;
+    function update(){
+        result.textContent= `Cart Quantity :  ${quantity}`;
+    }
+    let p = document.createElement("p");
+    let result = document.getElementById("para");
+    document.getElementById("quantity").addEventListener("click",function(){
+        console.log(`the cart quantity is : ${quantity}`);
+        update();
+    })
+    document.getElementById("add").addEventListener("click",function(){
+        quantity++;
+        console.log(quantity);
+        update();
+    })
+    document.getElementById("add2").addEventListener("click",function(){
+        quantity=quantity+2;
+        console.log(quantity);
+        update()
+    })
+    document.getElementById("add3").addEventListener("click",function(){
+        quantity=quantity+3;
+        console.log(quantity);
+        update()
+    })
+    document.getElementById("reset").addEventListener("click",function(){
+        quantity=0;
+        console.log(`the cart quantity is rest ${quantity}`);
+        update()
+    })
+    
+
+</script>
+</html>
