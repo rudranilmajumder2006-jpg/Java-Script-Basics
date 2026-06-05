@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Rock Paper Scissor</p>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissor">Scissor</button>
+</body>
+<script>
+    function checkNumber(){
+    const randomNo = Math.random();
+    if(randomNo>= 0 && randomNo<1/3){
+        const compMove = "rock";
+        return compMove;
+    }
+    else if(randomNo >=1/3 && randomNo<2/3){
+        const compMove = "paper";    
+        return compMove;
+    }
+    else{
+        const compMove = "scissor";    
+        return compMove;
+    }
+    }
+    document.getElementById("rock").addEventListener("click",function(){
+        let value = checkNumber();
+        if(value == "rock"){
+            alert("Computer move is rock congrats you won!!")
+        }
+        else{
+            alert(`Computer move is ${value} 
+            better luck next time`)
+        }
+    })
+    document.getElementById("paper").addEventListener("click",function(){
+        let value=checkNumber();
+        if(value == "paper"){
+            alert("Computer move is paper congrats you won!!")
+        }
+        else{
+            alert(`Computer move is ${value} 
+            better luck next time`)
+        }
+    })
+    document.getElementById("scissor").addEventListener("click",function(){
+        let value=checkNumber();
+        if(value == "scissor"){
+            alert("Computer move is scissor congrats you won!!")
+        }
+        else{
+            alert(`Computer move is ${value} 
+            better luck next time`)
+        }
+    })
+
+</script>
+</html>
